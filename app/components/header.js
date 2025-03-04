@@ -4,6 +4,10 @@ import Image from 'next/image'
 
 export default function Header() {
   const [show, setShow] = useState(true)
+  const scrollToPortfolio = () => {
+    document.getElementById("portfolio")?.scrollIntoView({behavior: 'smooth'})
+  };
+
   return (
     <div className="w-full flex flex-col items-center text-black px-4">
       {/* Top Header Section */}
@@ -16,7 +20,11 @@ export default function Header() {
             Programmer &amp; Web Developer
           </h2>
           <div className="flex w-full justify-center items-center gap-5 mt-10 mb-10">
-            <button className="rounded border py-2 pr-4 border-sky-500 text-sky-500 flex justify-center items-center gap-1 hover:bg-sky-500 hover:shadow-lg hover:text-white focus:border-sky-500 focus:border-2 transition-all duration-300">
+            <a
+             href='/Profile.pdf'
+             download='/Profile.pdf'
+             >
+              <button className="rounded border py-2 pr-4 border-sky-500 text-sky-500 flex justify-center items-center gap-1 hover:bg-sky-500 hover:shadow-lg hover:text-white focus:border-sky-500 focus:border-2 transition-all duration-300">
               <Image
                 src="/images/icon.png"
                 width={20}
@@ -26,7 +34,10 @@ export default function Header() {
               />
               Download CV
             </button>
-            <button className="rounded border py-2 px-3 border-sky-500 text-sky-500 flex justify-center items-center hover:bg-sky-500 hover:shadow-lg hover:text-white focus:border-sky-500 focus:border-2 transition-all duration-300">
+             </a>
+            <button className="rounded border py-2 px-3 border-sky-500 text-sky-500 flex justify-center items-center hover:bg-sky-500 hover:shadow-lg hover:text-white focus:border-sky-500 focus:border-2 transition-all duration-300"
+            onClick={scrollToPortfolio}
+            >
               Portfolio
             </button>
           </div>
@@ -53,8 +64,9 @@ export default function Header() {
               <Image
                 alt="creative pages"
                 src="/images/page.jpeg"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
+                className='min-w-[50px]'
               />
             </div>
             <div className="flex flex-col">
@@ -69,9 +81,10 @@ export default function Header() {
             <div className="mt-2">
               <Image
                 alt="fast loading"
-                src="/images/fastloading.png"
-                width={60}
-                height={60}
+                src="/images/a.png"
+                width={80}
+                height={80}
+                 className='min-w-[50px]'
               />
             </div>
             <div className="flex flex-col">
@@ -87,8 +100,9 @@ export default function Header() {
               <Image
                 alt="secure system"
                 src="/images/secure.png"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
+                className='min-w-[50px]'
               />
             </div>
             <div className="flex flex-col">
@@ -103,7 +117,7 @@ export default function Header() {
 
       {/* Portfolio Section */}
       <div className="w-full flex flex-col justify-center items-center mt-28">
-        <h2 className="text-[29px] font-sans font-semibold">My Portfolio</h2>
+        <h2 id='portfolio' className="text-[29px] font-sans font-semibold">My Portfolio</h2>
         <p className="mt-5 text-gray-600">Most recent projects I have complete</p>
         <div className="flex w-full justify-between px-10 max-w-[500px] mt-5">
           <button
@@ -148,7 +162,6 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Conditionally Rendered Card */}
           {show && (
             <div className="mt-10 w-80 border-sky-500 border shadow-lg hover:shadow-2xl transition-shadow duration-500 flex flex-col items-center justify-center text-center rounded-xl bg-white">
               <div className="group w-full flex flex-col items-center justify-center">
