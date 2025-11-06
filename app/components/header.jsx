@@ -31,55 +31,58 @@ export default function Portfolio() {
   }, [])
 
   const projects = [
-    {
-      id: 1,
-      title: "JobShip Platform",
-      description: "A comprehensive job search platform with AI-powered matching, admin panel, and real-time application tracking. Features secure authentication, role-based access control, and responsive design.",
-      fullDescription: "JobShip is a full-stack job platform that connects job seekers with employers using intelligent AI matching algorithms. The platform features a comprehensive admin dashboard, real-time application tracking, and secure user authentication.",
-      demoLink: "https://jobship-project.vercel.app/",
-      githubLink: "https://github.com/Alisina891/JobShip-Project",
-      problem: "Job seekers and students lacked a centralized platform to find suitable opportunities with intelligent matching.",
-      solution: "Developed a full-stack platform with AI-powered matching algorithms and personalized user profiles.",
-      results: "Increased user engagement by 200% with efficient job matching and real-time application tracking.",
-      features: [
-        "AI-Powered Job Matching",
-        "Admin Dashboard & Analytics", 
-        "Real-time Application Tracking",
-        "Secure Authentication System",
-        "Role-based Access Control",
-        "Responsive Mobile Design"
-      ],
-      technologies: ["Next.js", "React", "ASP.NET Core", "SQL Server", "Firebase", "Tailwind CSS"],
-      icon: <Briefcase className="w-16 h-16 text-blue-600" />,
-      role: "Full Stack Developer",
-      duration: "3 months",
-      gradient: "from-blue-500 to-blue-600"
-    },
-    {
-      id: 2,
-      title: "Online Shop",
-      description: "Complete e-commerce solution with product management, secure payment processing, and comprehensive admin panel. Features inventory management, order tracking, and customer analytics.",
-      fullDescription: "A modern e-commerce platform built with cutting-edge technologies to provide seamless shopping experience. Features include secure payment processing, inventory management, and comprehensive admin controls.",
-      demoLink: "https://online-shop-project-zeta.vercel.app/",
-      githubLink: "https://github.com/Alisina891/OnlineShop-Project",
-      problem: "Small businesses needed an efficient online presence with secure payment processing and inventory management.",
-      solution: "Built a full-stack e-commerce solution with responsive design and secure payment integration.",
-      results: "Successfully deployed with Stripe integration and comprehensive product management system.",
-      features: [
-        "Product Management System",
-        "Secure Payment Integration",
-        "Admin Dashboard & Analytics",
-        "Shopping Cart & Checkout",
-        "Order Tracking System",
-        "Customer Management"
-      ],
-      technologies: ["React", "Next.js", "ASP.NET Core", "SQL Server", "Stripe", "Tailwind CSS"],
-      icon: <ShoppingCart className="w-16 h-16 text-green-600" />,
-      role: "Full Stack Developer",
-      duration: "4 months",
-      gradient: "from-green-500 to-green-600"
-    }
-  ]
+  {
+    id: 1,
+    title: "JobShip Platform",
+    description: "A comprehensive job search platform with AI-powered matching, admin panel, and real-time application tracking. Features secure authentication, role-based access control, and responsive design.",
+    fullDescription: "JobShip is a full-stack job platform that connects job seekers with employers using intelligent AI matching algorithms. The platform features a comprehensive admin dashboard, real-time application tracking, and secure user authentication.",
+    demoLink: "https://jobship-project.vercel.app/",
+    githubLink: "https://github.com/Alisina891/JobShip-Project",
+    problem: "Job seekers and students lacked a centralized platform to find suitable opportunities with intelligent matching.",
+    solution: "Developed a full-stack platform with AI-powered matching algorithms and personalized user profiles.",
+    results: "Increased user engagement by 200% with efficient job matching and real-time application tracking.",
+    features: [
+      "User authentication with email verification",
+      "User registration and profile creation with database storage",
+      "Main page showing job posts for users",
+      "Employers can create, edit, and delete posts",
+      "User profile: view and update personal info and avatar",
+      "Admin panel: CRUD management of all posts",
+      "Users can view their own posts",
+      "Responsive design for mobile and desktop"
+    ],
+    technologies: ["Next.js", "React", "ASP.NET Core", "SQL Server", "Firebase", "Tailwind CSS"],
+    icon: <Briefcase className="w-16 h-16 text-blue-600" />,
+    role: "Full Stack Developer",
+    duration: "3 months",
+    gradient: "from-blue-500 to-blue-600"
+  },
+  {
+    id: 2,
+    title: "Online Shop",
+    description: "Complete e-commerce solution with product management, secure payment processing, and comprehensive admin panel. Features inventory management, order tracking, and customer analytics.",
+    fullDescription: "A modern e-commerce platform built with cutting-edge technologies to provide seamless shopping experience. Features include secure payment processing, inventory management, and comprehensive admin controls.",
+    demoLink: "https://online-shop-project-zeta.vercel.app/",
+    githubLink: "https://github.com/Alisina891/OnlineShop-Project",
+    problem: "Small businesses needed an efficient online presence with secure payment processing and inventory management.",
+    solution: "Built a full-stack e-commerce solution with responsive design and secure payment integration.",
+    results: "Successfully deployed with Stripe integration and comprehensive product management system.",
+    features: [
+      "User authentication and registration",
+      "Add, update, and delete products",
+      "Store and manage orders in the database",
+      "Users can view their own orders",
+      "Admin panel to manage products and orders",
+      "Shopping cart and checkout system",
+      "Responsive and mobile-friendly design"
+    ],
+    technologies: ["React", "Next.js", "ASP.NET Core", "SQL Server", "Stripe", "Tailwind CSS"],
+    icon: <ShoppingCart className="w-16 h-16 text-green-600" />,
+    role: "Full Stack Developer",
+    duration: "4 months",
+    gradient: "from-green-500 to-green-600"
+  }
+]
 
   const skills = [
     {
